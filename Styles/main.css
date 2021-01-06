@@ -41,6 +41,19 @@ header {
     }
 } */
 
+h2 {
+    font-size: 2.5rem;
+    padding: 10px;
+}
+
+h3 {
+    padding: 0.8rem;
+}
+
+h3.feat-article-header {
+    font-size: 2rem;
+}
+
 nav {
     display: flex;
     height: 10vh;
@@ -82,25 +95,12 @@ nav {
     text-decoration: none;
 }
 
-h2 {
-    font-size: 2.5rem;
-    padding: 10px;
-}
-
-h3 {
-    padding: 0.8rem;
-}
-
-h3.feat-article-header {
-    font-size: 2rem;
-}
-
-.nav-link li:hover {
+.nav-link li a:hover {
     border-bottom: 1px solid white;
 }
 
-.nav-link li:active {
-    border-bottom: 1px solid white;
+.nav-link li a:active {
+    border-bottom: 2px solid white;
 }
 
 #activeLi {
@@ -196,6 +196,10 @@ span.sciName {
     filter: none;
     transition-duration: 1s;
     width: 100%;
+    -webkit-filter: grayscale(0);
+}
+
+.block:active {
     -webkit-filter: grayscale(0);
 }
 
