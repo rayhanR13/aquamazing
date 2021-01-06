@@ -28,12 +28,17 @@ body {
 }
 
 header {
-    align-items: center;
     background: rgb(40, 40, 40);
-    display: flex;
-    height: 15vh;
-    justify-content: space-between;
+    top: 0;
     position: relative;
+    z-index: 100;
+}
+
+@supports (position: sticky) {
+    header {
+        position: sticky;
+        top: 0;
+    }
 }
 
 nav {
@@ -42,6 +47,14 @@ nav {
     right: 0;
     position: absolute;
     width: 50%;
+}
+
+.header-wrapper {
+    align-items: center;
+    display: flex;
+    height: 15vh;
+    justify-content: space-between;
+    position: relative;
 }
 
 #brand {
@@ -79,8 +92,8 @@ h3 {
     padding: 0.8rem;
 }
 
-h3.fishName {
-    font-size: 2em;
+h3.feat-article-header {
+    font-size: 2rem;
 }
 
 .nav-link li:hover {
@@ -156,7 +169,7 @@ footer {
     text-decoration: none;
 }
 
-img.artim {
+img.article-img {
     height: var(--blockContHgt);
     width: 500px;
 }
@@ -279,6 +292,76 @@ table#species {
 }
 
 @media screen and (max-width: 1000px) {
+    nav {
+        background: rgb(40, 40, 40);
+        clip-path: circle(100px at 90% -20%);
+        display: flex;
+        height: 100vh;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        transition: all 1s ease-out;
+        width: 100%;
+        -webkit-clip-path: circle(100px at 90% -20%);
+    }
+
+    nav.open {
+        clip-path: circle(1100px at 90% 10%);
+        pointer-events: all;
+        z-index: 2;
+        -webkit-clip-path: circle(1100px at 90% -20%);
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav-link li a {
+        font-size: 1.5rem;
+    }
+
+    .nav-link li {
+        opacity: 0;
+    }
+
+    .nav-link li.fade {
+        opacity: 1;
+    }
+
+    .nav-link li:nth-child(1) {
+        transition: opacity 0.5s ease 0.2s;
+    }
+
+    .nav-link li:nth-child(2) {
+        transition: opacity 0.5s ease 0.4s;
+    }
+
+    .nav-link li:nth-child(3) {
+        transition: opacity 0.5s ease 0.6s;
+    }
+
+    .nav-link li:nth-child(4) {
+        transition: opacity 0.5s ease 0.8s;
+    }
+
+    .burger {
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 3;
+    }
+
+    .line {
+        background: white;
+        height: 3px;
+        margin: 5px;
+        width: 30px;
+    }
+
     section#about {
         font-size: 1.1rem;
         margin: 80px 5% 30px 5%;
@@ -293,19 +376,99 @@ table#species {
     }
 
     .pic {
+        height: auto;
         order: 1;
+        width: 90vw;
     }
 
     .description {
+        height: auto;
         order: 2;
+        width: 80vw;
     }
 
     .description p {
-        font-size: 1.1rem;
+        font-size: 1rem;
+    }
+
+    img.article-img {
+        height: auto;
+        object-fit: cover;
+        width: 80vw;
     }
 }
 
 @media screen and (max-width: 768px) {
+    nav {
+        background: rgb(40, 40, 40);
+        clip-path: circle(100px at 90% -20%);
+        display: flex;
+        height: 100vh;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        transition: all 1s ease-out;
+        width: 100%;
+        -webkit-clip-path: circle(100px at 90% -20%);
+    }
+
+    nav.open {
+        clip-path: circle(1100px at 90% 10%);
+        pointer-events: all;
+        z-index: 2;
+        -webkit-clip-path: circle(1100px at 90% -20%);
+    }
+
+    .nav-link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .nav-link li a {
+        font-size: 1.5rem;
+    }
+
+    .nav-link li {
+        opacity: 0;
+    }
+
+    .nav-link li.fade {
+        opacity: 1;
+    }
+
+    .nav-link li:nth-child(1) {
+        transition: opacity 0.5s ease 0.2s;
+    }
+
+    .nav-link li:nth-child(2) {
+        transition: opacity 0.5s ease 0.4s;
+    }
+
+    .nav-link li:nth-child(3) {
+        transition: opacity 0.5s ease 0.6s;
+    }
+
+    .nav-link li:nth-child(4) {
+        transition: opacity 0.5s ease 0.8s;
+    }
+
+    .burger {
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 3;
+    }
+
+    .line {
+        background: white;
+        height: 3px;
+        margin: 5px;
+        width: 30px;
+    }
+
     section#about {
         font-size: 1.1rem;
         margin: 80px 5% 30px 5%;
@@ -335,7 +498,7 @@ table#species {
         font-size: 1rem;
     }
 
-    img.artim {
+    img.article-img {
         height: auto;
         object-fit: cover;
         width: 90vw;
@@ -361,6 +524,14 @@ table#species {
         pointer-events: all;
         z-index: 2;
         -webkit-clip-path: circle(1100px at 90% -20%);
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3.feat-article-header {
+        font-size: 1.5rem;
     }
 
     #brand {
@@ -447,7 +618,7 @@ table#species {
         text-align: left;
     }
 
-    img.artim {
+    img.article-img {
         height: auto;
         object-fit: cover;
         width: 90vw;
