@@ -23,7 +23,6 @@ html {
 
 body {
     background-color: black;
-    color: white;
     font-family: "Poppins", sans-serif;
 }
 
@@ -242,10 +241,10 @@ span.sciName {
 section#about {
     color: silver;
     font-size: 1rem;
-    margin: 80px 10% 30px 10%;
-    padding: 50px;
+    margin: 80px auto 30px auto;
+    padding: 20px;
     text-align: center;
-    width: 80vw;
+    width: 85vw;
 }
 
 #about h2 {
@@ -365,9 +364,9 @@ table#species {
 
     section#about {
         font-size: 1.1rem;
-        margin: 80px 5% 30px 5%;
-        padding: 5%;
-        width: 90vw;
+        margin: 80px auto 30px auto;
+        padding: 10px;
+        width: 95vw;
     }
 
     .block {
@@ -472,9 +471,9 @@ table#species {
 
     section#about {
         font-size: 1.1rem;
-        margin: 80px 5% 30px 5%;
-        padding: 5%;
-        width: 90vw;
+        margin: 80px auto 30px auto;
+        padding: 10px;
+        width: 95vw;
     }
 
     .block {
@@ -595,9 +594,9 @@ table#species {
 
     section#about {
         font-size: 1.1rem;
-        margin: 80px 5% 30px 5%;
-        padding: 5%;
-        width: 90vw;
+        margin: 80px auto 30px auto;
+        padding: 10px;
+        width: 95vw;
     }
 
     .block {
