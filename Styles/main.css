@@ -29,7 +29,7 @@ body {
 
 header {
     background: rgb(40, 40, 40);
-    height: 15vh;
+    height: 100px;
     position: relative;
     top: 0;
     z-index: 100;
@@ -506,6 +506,10 @@ table#species {
 }
 
 @media screen and (max-width: 450px) {
+    header {
+        height: 12vh;
+    }
+
     nav {
         background: rgb(40, 40, 40);
         clip-path: circle(100px at 90% -20%);
