@@ -319,7 +319,8 @@ table#species {
     .nav-link {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        margin-top: 6rem;
     }
 
     .nav-link li a {
@@ -327,6 +328,7 @@ table#species {
     }
 
     .nav-link li {
+        margin-top: 2rem;
         opacity: 0;
     }
 
@@ -426,7 +428,8 @@ table#species {
     .nav-link {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        margin-top: 6rem;
     }
 
     .nav-link li a {
@@ -434,6 +437,7 @@ table#species {
     }
 
     .nav-link li {
+        margin-top: 2rem;
         opacity: 0;
     }
 
@@ -549,7 +553,8 @@ table#species {
     .nav-link {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+        margin-top: 6rem;
     }
 
     .nav-link li a {
@@ -557,6 +562,7 @@ table#species {
     }
 
     .nav-link li {
+        margin-top: 2rem;
         opacity: 0;
     }
 
