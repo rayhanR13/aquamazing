@@ -29,17 +29,18 @@ body {
 
 header {
     background: rgb(40, 40, 40);
-    top: 0;
+    height: 15vh;
     position: relative;
+    top: 0;
     z-index: 100;
 }
 
-@supports (position: sticky) {
+/* @supports (position: sticky) {
     header {
         position: sticky;
         top: 0;
     }
-}
+} */
 
 nav {
     display: flex;
@@ -52,7 +53,6 @@ nav {
 .header-wrapper {
     align-items: center;
     display: flex;
-    height: 15vh;
     justify-content: space-between;
     position: relative;
 }
