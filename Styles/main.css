@@ -24,6 +24,7 @@ html {
 body {
     background-color: black;
     font-family: "Poppins", sans-serif;
+    min-height: 100vh;
 }
 
 header {
@@ -209,6 +210,10 @@ span.sciName {
     font-size: 15px;
 }
 
+.blockContent.article {
+    overflow: auto;
+}
+
 .pic {
     height: var(--blockContHgt);
     overflow: hidden;
@@ -294,6 +299,14 @@ table#species {
 
 #species td:nth-child(2) {
     width: 60%;
+}
+
+.extra-small {
+    color: gray;
+    font-size: 0.7rem;
+    margin: 5px 20px 0 20px;
+    text-align: left;
+    width: 25%;
 }
 
 @media screen and (max-width: 1000px) {
