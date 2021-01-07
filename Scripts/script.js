@@ -33,12 +33,22 @@ modalContainer.addEventListener("click", (e) => {
 });
 
 // X days ago
-const daysField = document.querySelector("#x-days-ago");
-daysField.innerHTML = xDaysAgo();
+const toDate = new Date();
+const fromDate = new Date(2021, 0, 1);
+const datePart = "d"; // datepart: 'y', 'm', 'w', 'd', 'h', 'n', 's'
 
-function xDaysAgo() {
-    const earlierDate = new Date(2021, 0, 1);
-    const today = new Date();
-    const daysDiff = Math.floor((today - earlierDate) / 86400000);
-    return daysDiff;
+const daysField = document.querySelector("#x-days-ago");
+daysField.innerHTML = xDaysAgo(toDate, fromDate, datePart);
+
+function xDaysAgo(toDate, fromDate, datePart) {
+    const diff = toDate - fromDate;
+    const divideBy = {
+        w: 604800000,
+        d: 86400000,
+        h: 3600000,
+        n: 60000,
+        s: 1000,
+    };
+
+    return Math.floor(diff / divideBy[datePart]);
 }
