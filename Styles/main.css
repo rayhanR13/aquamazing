@@ -693,10 +693,11 @@ table#species {
     }
 
     .block {
+        align-items: center;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 90vw;
     }
 
     .pic {
@@ -708,7 +709,6 @@ table#species {
     .description {
         height: auto;
         order: 2;
-        padding: 0 1.5rem 1rem 1.5rem;
         width: 90vw;
     }
 
