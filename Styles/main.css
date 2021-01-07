@@ -697,6 +697,7 @@ table#species {
     .description {
         height: auto;
         order: 2;
+        padding: 0 1.5rem 1rem 1.5rem;
         width: 90vw;
     }
 
