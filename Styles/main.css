@@ -193,12 +193,13 @@ span.sciName {
 }
 
 .block:hover {
-    filter: none;
+    filter: grayscale(0);
     transition-duration: 1s;
     -webkit-filter: grayscale(0);
 }
 
 .block:active {
+    filter: grayscale(0);
     -webkit-filter: grayscale(0);
 }
 
