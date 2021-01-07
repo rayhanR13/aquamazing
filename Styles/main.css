@@ -116,6 +116,7 @@ section.figure {
 }
 
 figure.blockFigure {
+    border-radius: 5px;
     display: inline-block;
     height: 275px;
     margin: 15px;
