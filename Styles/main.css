@@ -8,7 +8,7 @@
 }
 
 :root {
-    --blockContHgt: 450px;
+    --blockContHgt: 480px;
     --blockContWidth: 500px;
 }
 
@@ -188,7 +188,7 @@ span.sciName {
     overflow: hidden;
     text-align: center;
     transition-duration: 1s;
-    width: 90%;
+    width: calc(var(--blockContWidth) * 2);
     -webkit-filter: grayscale(100%);
 }
 
