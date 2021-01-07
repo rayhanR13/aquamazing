@@ -22,9 +22,6 @@ modalImages.forEach((image) => {
 
         const imgSrc = image.getAttribute("src");
         modalFullImg.src = imgSrc;
-
-        console.log(modalFullImg);
-        console.log(imgSrc);
     });
 });
 

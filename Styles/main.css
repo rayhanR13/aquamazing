@@ -339,6 +339,7 @@ table#species {
     top: 0;
     transition: all 0.25s ease-out;
     width: 100vw;
+    z-index: 1000;
 }
 
 .modal-container.open {
@@ -472,6 +473,11 @@ table#species {
         object-fit: fill;
         width: 100%;
     }
+
+    .modal-full-img {
+        height: auto;
+        width: 80vw;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -582,6 +588,11 @@ table#species {
         height: auto;
         object-fit: cover;
         width: 80vw;
+    }
+
+    .modal-full-img {
+        height: auto;
+        width: 90vw;
     }
 }
 
@@ -710,5 +721,10 @@ table#species {
         height: auto;
         object-fit: cover;
         width: 90vw;
+    }
+
+    .modal-full-img {
+        height: auto;
+        width: 95vw;
     }
 }
