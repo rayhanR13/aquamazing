@@ -31,3 +31,14 @@ modalContainer.addEventListener("click", (e) => {
         modalFullImg.classList.remove("open");
     }
 });
+
+// X days ago
+const daysField = document.querySelector("#x-days-ago");
+daysField.innerHTML = xDaysAgo();
+
+function xDaysAgo() {
+    const earlierDate = new Date(2021, 0, 1);
+    const today = new Date();
+    const daysDiff = Math.floor((today - earlierDate) / 86400000);
+    return daysDiff;
+}
