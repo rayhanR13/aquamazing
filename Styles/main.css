@@ -9,6 +9,7 @@
 
 :root {
     --blockContHgt: 450px;
+    --blockContWidth: 500px;
 }
 
 * {
@@ -49,10 +50,6 @@ h2 {
 
 h3 {
     padding: 0.8rem;
-}
-
-h3.feat-article-header {
-    font-size: 2rem;
 }
 
 nav {
@@ -171,7 +168,7 @@ footer {
 
 img.article-img {
     height: var(--blockContHgt);
-    width: 500px;
+    width: var(--blockContWidth);
 }
 
 span.sciName {
@@ -196,12 +193,13 @@ span.sciName {
 }
 
 .block:hover {
-    filter: none;
+    filter: grayscale(0);
     transition-duration: 1s;
     -webkit-filter: grayscale(0);
 }
 
 .block:active {
+    filter: grayscale(0);
     -webkit-filter: grayscale(0);
 }
 
@@ -214,11 +212,24 @@ span.sciName {
     overflow: auto;
 }
 
+.article .feat-article-header {
+    font-size: 2rem;
+    position: relative;
+}
+
+@supports (position: sticky) {
+    .article .feat-article-header {
+        background-color: white;
+        position: sticky;
+        top: 0;
+    }
+}
+
 .pic {
     height: var(--blockContHgt);
     overflow: hidden;
     text-align: center;
-    width: 500px;
+    width: var(--blockContWidth);
 }
 
 .description {
@@ -228,10 +239,16 @@ span.sciName {
     height: var(--blockContHgt);
     overflow: hidden;
     padding-bottom: 15px;
-    width: 500px;
+    width: var(--blockContWidth);
 }
 
 .description h3 {
+    padding: 15px 20px 0 20px;
+    text-align: left;
+}
+
+.description .fish-name {
+    font-size: 2rem;
     padding: 15px 20px 0 20px;
     text-align: left;
 }
@@ -391,21 +408,26 @@ table#species {
 
     .block {
         border-radius: 5px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pic {
-        height: auto;
-        order: 1;
         width: 90vw;
     }
 
+    .pic {
+        height: 300px;
+        width: 50%;
+    }
+
     .description {
-        height: auto;
-        order: 2;
-        width: 80vw;
+        height: 300px;
+        overflow: auto;
+        width: 50%;
+    }
+
+    .description .fish-name,
+    .description .feat-article-header {
+        background-color: white;
+        font-size: 1.5rem;
+        position: sticky;
+        top: 0;
     }
 
     .description p {
@@ -413,9 +435,9 @@ table#species {
     }
 
     img.article-img {
-        height: auto;
-        object-fit: cover;
-        width: 80vw;
+        height: 300px;
+        object-fit: fill;
+        width: 100%;
     }
 }
 
@@ -500,22 +522,23 @@ table#species {
     }
 
     .block {
+        align-items: center;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        width: 80vw;
     }
 
     .pic {
         height: auto;
         order: 1;
-        width: 90vw;
+        width: 80vw;
     }
 
     .description {
         height: auto;
         order: 2;
-        width: 90vw;
+        width: 80vw;
     }
 
     .description p {
@@ -525,7 +548,7 @@ table#species {
     img.article-img {
         height: auto;
         object-fit: cover;
-        width: 90vw;
+        width: 80vw;
     }
 }
 
